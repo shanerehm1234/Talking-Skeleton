@@ -10,13 +10,14 @@ Listens for wake word "Hey Skeleton"
 
 When wake word is activated
   Speech-To-Text to record audio from USB Microphone
+  VOSK to STT - https://github.com/alphacep/vosk-api
 
 Sends message to Google GenAI which sends back a response
   Uses Google Gemini API
 
 Plays recieved message through Text-To-Speech
   Piper TTS - local, open source, optimized for RPi 4 
-
+  https://github.com/rhasspy/piper
 
 Return to beginning 
 

@@ -1,12 +1,32 @@
 AI Talking skeleton proeject
 
-Uses Google Gemini API to generate responses to questions. 
-Uses Googl Cloude Speech-to-text API and Text-to-speech APIs 
+Currently using Raspberry Pi 4 2GB. Will upgrade to Pi5 8GB soon.
+
+Autostart script at bootup
+
+Listens for wake word "Hey Skeleton"
+  Uses OpenWakeWord for local processing
+  https://github.com/dscripka/openWakeWord
+
+When wake word is activated
+  Speech-To-Text to record audio from USB Microphone
+
+Sends message to Google GenAI which sends back a response
+  Uses Google Gemini API
+
+Plays recieved message through Text-To-Speech
+
+
+Return to beginning 
+
+
+
+ 
 Uses pixels to indicate status:
-  Green chase = Ready/idle
-  Solid Blue = Wake word detected/listening
-  Blue/White twinkle = Processing
-  Rainbow cycle = Responding
+  Green chase = Ready/idle (listening for wake word)
+  Solid Blue = Wake word detected/listening (STT)
+  Blue/White twinkle = Processing (cloud API)
+  Rainbow cycle = Responding (TTS)
 
 Originally used Rpi_WS281x library to control pixels, also tried Neopixel library. 
   RPi and neopixel libraries need to be installed at system level since they access system hardware (GPIO pins)

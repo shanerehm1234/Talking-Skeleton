@@ -48,6 +48,7 @@ You are talking to kids and young teens."
   - Audio from USB Microphone is sent to faster-whisper on server
   - faster-whisper processes Speech to Text and sends it to Google
   - HA automation changes WLED preset to "Listening"
+  - https://github.com/rhasspy/wyoming-faster-whisper
 
 - Google Generative AI sends back a response
   - I set up another docker with Ollama and tried a few local AI models, but i think Google GenAI still provided the best responses. It still throws some weird stuff in there, like adding the time and/or date in some responses for no apparent reaseon.

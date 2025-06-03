@@ -41,17 +41,21 @@ For the AI part, I am using Google Generative AI API with the following system p
 You are talking to kids and young teens."  
 
 - Listens for wake word "Hey Skelly"
- - Uses openWakeWord on the PI
- - https://github.com/dscripka/openWakeWord
+  - Uses openWakeWord on the PI
+  - https://github.com/dscripka/openWakeWord
 
 - When wake word is activated
   - Audio from USB Microphone is sent to faster-whisper on server
   - faster-whisper processes Speech to Text and sends it to Google
+  - HA automation changes WLED preset to "Listening"
 
 - Google Generative AI sends back a response
   - I set up another docker with Ollama and tried a few local AI models, but i think Google GenAI still provided the best responses. It still throws some weird stuff in there, like adding the time and/or date in some responses for no apparent reaseon.
- 
+  - HA automation changes WLED preset to "Thinking"
+
 - Piper plays recieved message through Text-To-Speech
   - I am using en_GB_Alan (Medium) voice
   - https://github.com/rhasspy/piper
-  - The big problem I have with this is it speaks the word ASTRISK whenever there is an astrisk in the response. Sometimes they are used to emphisise a word in a response (like "What is *YOUR* favorite Halloween candy?") and sometimes they highlight an action (like "*holds out bag* Trick or treat!"). So simply filtering out the astrisks won't work. I'm trying to eliminate them from the responses via system prompt, with some success, but they still pop up once in a while.
+  - HA automation changes WLED preset to "Responding"
+  - The big problem I have with this is it speaks the word ASTERISK whenever there is an asterisk in the response. Sometimes they are used to emphasize a word in a response (like "What is *YOUR* favorite Halloween candy?") and sometimes they highlight an action (like "*holds out bag* Trick or treat!"). So simply filtering out the asterisks won't work. I'm trying to eliminate them from the responses via system prompt, with some success, but they still pop up once in a while.
+  - HA automation changes WLED preset to "Idle"

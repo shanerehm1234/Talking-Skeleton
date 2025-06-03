@@ -1,8 +1,15 @@
 AI Talking skeleton proeject
 
-Currently using Raspberry Pi 4 2GB. Will upgrade to Pi5 8GB soon.
+Currently using Raspberry Pi 4 2GB.
 
-Autostart script at bootup
+## Eyes
+Based on UncannyEyes project by AdaFruit.  https://learn.adafruit.com/animated-electronic-eyes/overview
+powered by Adafruit ItsyBitsy M0 board.  https://www.adafruit.com/product/3727
+Using 2 128x128 TFT SPI LCD screens.  https://www.aliexpress.us/item/3256808589910694.html
+
+
+
+
 
 Listens for wake word "Hey Skeleton"
   Uses OpenWakeWord for local processing

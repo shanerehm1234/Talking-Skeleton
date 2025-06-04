@@ -1,6 +1,6 @@
 # AI Talking skeleton proeject
 
-Currently using Raspberry Pi 4 2GB.
+Currently using Raspberry Pi 4 2GB running Pi OS 64-bit Lite with Wyoming Satallite software and openwakeword. piper and whisper-faster have been offloaded from the pi and are running in seperate docker containers on my Unraid server. This helped reduce the lag and latency a lot. My Home Assistant (running on a VM, also on my Unraid server) ties it all together beautifully. 
 ![image](https://github.com/user-attachments/assets/6a1f7ae3-b676-432a-a9fa-265a4649d864)  
 
 

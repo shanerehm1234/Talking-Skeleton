@@ -1,6 +1,9 @@
 # AI Talking skeleton proeject
 
 Currently using Raspberry Pi 4 2GB.
+![image](https://github.com/user-attachments/assets/6a1f7ae3-b676-432a-a9fa-265a4649d864)  
+
+
 
 ## Eyes
 Based on UncannyEyes project by AdaFruit. https://learn.adafruit.com/animated-electronic-eyes/overview  
@@ -10,11 +13,22 @@ I used some glass lenses for the eyeballs (https://www.aliexpress.us/item/325680
 I then mounted the LCDs to the lenses and secured them with Propoxy 20.   
 Note: The LED pin on the displays needs 3.3V. I got this by soldering a 68Ω resistor from the VCC to LCD pin trace on the board.  
 Some more of my sloppy notes on the eyes: https://github.com/shanerehm1234/M0_Digital_Eyes/blob/main/README.md  
+![image](https://github.com/user-attachments/assets/f5983718-c309-446e-9ef2-49ea777641ba)  
+![image](https://github.com/user-attachments/assets/e6a9bdaa-aca1-426b-bd6b-9123ea74fa14)  
+![image](https://github.com/user-attachments/assets/037deed7-9aba-4745-9a86-da8f3a934f7f)  
+![image](https://github.com/user-attachments/assets/6181d464-d52c-4e05-87c6-87f369939282)  
+
 
 ## Jaw
 The jaw is a simple single mg-90 servo glued to the inside of the skull. A piece of rigid wire connects the servo horn to a hole drilled in the back of the jaw.  
 I used an old Wee Little Talker board to control the servo. It takes audio input and translates it to servo movements in real time. Unfortunatly the creator of these boards passed away years ago and they are no longer available.  https://store.nutsvolts.com/project-kits/sku15888  
 A Jawdrino (DIY) or ServoTalk from FrightProps should be able to accomplish the same effect.  
+![image](https://github.com/user-attachments/assets/a54341fa-06ba-4df6-9983-2dc3c2c1a220)  
+![image](https://github.com/user-attachments/assets/283ee1cb-de20-4797-a393-0d67419ec938)  
+![image](https://github.com/user-attachments/assets/a2e15277-677a-42e0-abd8-f9031d5c5272)  
+![image](https://github.com/user-attachments/assets/776675c0-6cde-47d5-87f6-0dc14ab4b5e4)  
+
+
 
 ## Skull
 The skull was just ripped off a basic Home Depot Skeleton. It came with a hinged jaw already. The plastic is soft and easy to cut, with lots of room inside the head. 
@@ -29,6 +43,9 @@ Uses pixels to indicate status:
 - Blue pulse = Wake word detected/listening (STT)
 - White twinkle = Processing (cloud API)
 - Green chase = Responding (TTS)
+
+![image](https://github.com/user-attachments/assets/7612c88e-d4f7-4ae6-b211-e7d245e56848)  
+
 
 ## Voice 
 There are several ways to accomplish this. For the interactivity part, I ended up using the Wyoming Stallite protocol in Home Assistant.  
@@ -60,3 +77,8 @@ You are talking to kids and young teens."
   - HA automation changes WLED preset to "Responding"
   - The big problem I have with this is it speaks the word ASTERISK whenever there is an asterisk in the response. Sometimes they are used to emphasize a word in a response (like "What is *YOUR* favorite Halloween candy?") and sometimes they highlight an action (like "*holds out bag* Trick or treat!"). So simply filtering out the asterisks won't work. I'm trying to eliminate them from the responses via system prompt, with some success, but they still pop up once in a while.
   - HA automation changes WLED preset to "Idle"
+![image](https://github.com/user-attachments/assets/19071240-8318-4086-a61c-caf1b04f523a)  
+![image](https://github.com/user-attachments/assets/0c57e90b-017a-4744-9409-bf43c6a24fa8)  
+![image](https://github.com/user-attachments/assets/d482574f-8446-4da0-954a-b068590aec0a)  
+
+
